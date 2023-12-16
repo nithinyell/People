@@ -1,7 +1,7 @@
 // People List View
 
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { PeopleViewModel } from "../view-models/people-viewmodel";
+import { PeopleViewModel } from "../view-model/people-viewmodel";
 
 const styles = StyleSheet.create({
     container: {

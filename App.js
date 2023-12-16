@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import PeopleList from './src/modules/people/view/PeopleList';
+import BuildRoot from './src/navigation/navigation';
 
 const styles = StyleSheet.create({
   center: {
@@ -18,7 +19,7 @@ const Greeting = props => {
 
 const LotsOfGreetings = () => {
   return (
-    <PeopleList/>
+    <BuildRoot/>
   );
 };
 
