@@ -1,26 +1,11 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import PeopleList from './src/modules/people/view/PeopleList';
 import BuildRoot from './src/navigation/navigation';
+import { NavigationContainer } from '@react-navigation/native';
 
-const styles = StyleSheet.create({
-  center: {
-    alignItems: 'center',
-  },
-});
-
-const Greeting = props => {
+const PeopleApp = () => {
   return (
-    <View style={styles.center}>
-      <Text>Hello {props.name}!</Text>
-    </View>
+      <BuildRoot/>
   );
 };
 
-const LotsOfGreetings = () => {
-  return (
-    <BuildRoot/>
-  );
-};
-
-export default LotsOfGreetings;
+export default PeopleApp;

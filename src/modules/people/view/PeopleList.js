@@ -5,8 +5,7 @@ import { PeopleViewModel } from "../view-model/people-viewmodel";
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        paddingTop: 22,
+        flex: 1
     },
     person: {
         padding: 10,
@@ -15,23 +14,27 @@ const styles = StyleSheet.create({
     },
   });
 
-const PeopleList = () => {
-    const { people } = PeopleViewModel();
-
+const PeopleList = ({ navigation }) => {
+    const { people, navigateToDetails } = PeopleViewModel(navigation);
+    
     const PersonItem = ({ person }) => {
-        return <View>
-            <Text style={[styles.person]}>
-                {person.name}
-            </Text>
-        </View>
+        return (
+            <View>
+                <TouchableOpacity onPress={() => { navigation.navigate("Person Details") }}>
+                    <Text style={[styles.person]}>
+                        {person.name}
+                    </Text>
+                </TouchableOpacity>
+            </View>
+            );
     };
 
     return (
-        <View style={[styles.center, {top: 50}]}>
-            <FlatList 
-                data={people}
-                keyExtractor={(person) => person.email}
-                renderItem={({ item }) => <PersonItem person={ item }/>}
+        <View style={[styles.center]}>
+            <FlatList
+                data={ people }
+                renderItem={({item}) => <PersonItem person={ item }/>}
+                keyExtractor={item => item.email}
             />
         </View>
     );

@@ -1,17 +1,17 @@
 // Person Details view model 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PersonDetailsViewModel = () => {
-    const[personDetails, setPersonDdtails] = useState([]);
+    const[personDetails, setPersonDetails] = useState([]);
 
     useEffect(() => {
         fetchPersonDetails(123)
     }, []);
 
-    
     const fetchPersonDetails = async(personId) => {
-        // In real time scenario we may fatch person detials by using personid from API  
+        // In real time scenario we may fatch person detials by using personid from API 
+        setPersonDetails("ABC") 
     }
     
 

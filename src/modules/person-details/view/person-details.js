@@ -1,6 +1,6 @@
 // Person Details
 
-import { View } from "react-native";
+import { View,Text} from "react-native";
 import { PersonDetailsViewModel } from "../view-model/person-details-viewmodel";
 
 const PersonDetails = () => {

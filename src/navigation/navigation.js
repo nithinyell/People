@@ -10,7 +10,7 @@ const stack = createStackNavigator();
 const BuildRoot = () => {
     return (
         <NavigationContainer>
-            <stack.Navigator initialRouteName="PeopleList">
+            <stack.Navigator>
                 <stack.Screen name="People" component={PeopleList}/>
                 <stack.Screen name="Person Details" component={PersonDetails}/>
             </stack.Navigator>
