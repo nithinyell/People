@@ -3,13 +3,14 @@
 import { View,Text} from "react-native";
 import { PersonDetailsViewModel } from "../view-model/person-details-viewmodel";
 
-const PersonDetails = () => {
-    const { personDetails } = PersonDetailsViewModel();
+const PersonDetails = ({ route, navigation }) => {
+    const { person } = route.params;
+    const { personProfile } = PersonDetailsViewModel(person);
 
     return (
         <View>
             <Text>
-                Person Details
+                {personProfile.name}
             </Text>
         </View>
     );

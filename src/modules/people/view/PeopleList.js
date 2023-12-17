@@ -15,18 +15,22 @@ const styles = StyleSheet.create({
   });
 
 const PeopleList = ({ navigation }) => {
-    const { people, navigateToDetails } = PeopleViewModel(navigation);
+    const { people } = PeopleViewModel(navigation);
     
     const PersonItem = ({ person }) => {
         return (
             <View>
-                <TouchableOpacity onPress={() => { navigation.navigate("Person Details") }}>
+                <TouchableOpacity onPress={() => { navigateToDetails(person) }}>
                     <Text style={[styles.person]}>
                         {person.name}
                     </Text>
                 </TouchableOpacity>
             </View>
             );
+    };
+
+    const navigateToDetails = (person) => {
+        navigation.navigate("Person Details", { person })
     };
 
     return (

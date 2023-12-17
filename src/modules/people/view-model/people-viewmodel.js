@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { mockPeopleList } from "../data/mock/peopleList";
 import Person from "../models/person";
 
-const PeopleViewModel = (navigation) => {
+const PeopleViewModel = () => {
     const[people, setPeople] = useState([]);
 
     useEffect(() => {
@@ -28,11 +28,7 @@ const PeopleViewModel = (navigation) => {
         }
     }
 
-    const navigateToDetails = (person) => {
-        navigation.navigate("Person Details", { person })
-    };
-
-    return { people, navigateToDetails };
+    return { people };
 }
 
 export { PeopleViewModel };
