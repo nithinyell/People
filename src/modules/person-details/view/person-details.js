@@ -17,9 +17,9 @@ const PersonDetails = ({route, navigation}) => {
     headerRight: () => (
       <HeaderButtons>
         {isEditing ? (
-          <Item title="Save" iconName="save" onPress={saveChanges} />
+          <Item title="Save" onPress={saveChanges} />
         ) : (
-          <Item title="Edit" iconName="pencil" onPress={toggleEditingMode} />
+          <Item title="Edit" onPress={toggleEditingMode} />
         )}
       </HeaderButtons>
     ),

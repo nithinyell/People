@@ -8,7 +8,7 @@ const PersonDetailsViewModel = person => {
 
   useEffect(() => {
     // Update the person profile whenever editedPerson changes
-    setPersonProfile(editedPerson); 
+    setPersonProfile(editedPerson);
   }, [editedPerson]);
 
   useEffect(() => {
@@ -28,17 +28,14 @@ const PersonDetailsViewModel = person => {
     // Additional save logic can be added here; send api update
   };
 
+  // Call the simulated API function
+  const simulateApiCall = async () => {
+    return person;
+  };
+
   const fetchPersonDetails = async person => {
-    const simulateApiCall = async () => {
-      const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-      // Simulate fetching additional details by using personid (replace this with your real API call logic)
-      // For now, just returning the person details
-      await delay(1); // Simulate delay 1 milliseconds
-      return person;
-    };
-
-    // Call the simulated API function
+    // Simulate fetching additional details by using personid (replace this with your real API call logic)
+    // For now, just returning the person details
     const response = await simulateApiCall();
 
     // Update the person profile
@@ -48,4 +45,4 @@ const PersonDetailsViewModel = person => {
   return {personProfile, handleEdit, saveChanges};
 };
 
-export {PersonDetailsViewModel};
+export { PersonDetailsViewModel };
