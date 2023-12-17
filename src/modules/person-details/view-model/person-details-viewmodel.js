@@ -1,21 +1,33 @@
 // Person Details view model 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const PersonDetailsViewModel = () => {
-    const[personDetails, setPersonDdtails] = useState([]);
+const PersonDetailsViewModel = (person) => {
+  const [personProfile, setPersonProfile] = useState([]);
+  const [editedPerson, setEditedPerson] = useState({...person});
 
-    useEffect(() => {
-        fetchPersonDetails(123)
-    }, []);
+  useEffect(() => {
+    fetchPersonDetails(person);
+  }, [person]);
 
-    
-    const fetchPersonDetails = async(personId) => {
-        // In real time scenario we may fatch person detials by using personid from API  
-    }
-    
+  const handleEdit = (field, value) => {
+    setEditedPerson(prevPerson => ({
+      ...prevPerson,
+      [field]: value,
+    }));
+  };
 
-    return personDetails;
+  const resetForm = () => {
+    setEditedPerson({...person});
+  };
+
+  const fetchPersonDetails = async person => {
+    // In real time scenario we may fetch additional person detials by using personid from person object
+    // For now, just setting the details object as the person profile
+    setPersonProfile(person);
+  };
+
+  return { personProfile, editedPerson, handleEdit, resetForm };
 };
 
 export { PersonDetailsViewModel };
