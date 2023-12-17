@@ -9,14 +9,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   person: {
+    flex: 1,
     padding: 5,
     fontSize: 14,
-    height: 22,
+    height: 27,
+    lineHeight: 20
   },
   email: {
+    flex: 1,
     padding: 5,
     fontSize: 12,
-    height: 22,
+    height: 27,
+    lineHeight: 20
   },
 });
 
@@ -26,7 +30,7 @@ const PeopleList = ({navigation}) => {
   const PersonItem = ({person}) => {
     return (
       <TouchableOpacity onPress={() => {navigateToDetails(person)}}>
-        <View style={{padding: 5}}>
+        <View style={{padding: 5, flex: 1}}>
           <Card
             style={{
               marginTop: 0,
@@ -39,7 +43,7 @@ const PeopleList = ({navigation}) => {
                 label={person.name[0].toUpperCase()}
                 style={{marginRight: 8, backgroundColor: getRandomColor()}}
               />
-              <View style={{flexDirection: 'column'}}>
+              <View style={{flexDirection: 'column', padding: 5}}>
                 <Text style={styles.person}>{person.name}</Text>
                 <Text style={styles.email}>{person.email}</Text>
               </View>
