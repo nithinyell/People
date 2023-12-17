@@ -1,12 +1,18 @@
-// Person Details view model 
+// Person Details view model
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from 'react';
 
-const PersonDetailsViewModel = (person) => {
-  const [personProfile, setPersonProfile] = useState([]);
-  const [editedPerson, setEditedPerson] = useState({...person});
+const PersonDetailsViewModel = person => {
+  const [personProfile, setPersonProfile] = useState(person);
+  const [editedPerson, setEditedPerson] = useState(person);
 
   useEffect(() => {
+    // Update the person profile whenever editedPerson changes
+    setPersonProfile(editedPerson); 
+  }, [editedPerson]);
+
+  useEffect(() => {
+    // Fetch person details from the API whenever needed
     fetchPersonDetails(person);
   }, [person]);
 
@@ -17,17 +23,29 @@ const PersonDetailsViewModel = (person) => {
     }));
   };
 
-  const resetForm = () => {
-    setEditedPerson({...person});
+  const saveChanges = () => {
+    setPersonProfile(editedPerson);
+    // Additional save logic can be added here; send api update
   };
 
   const fetchPersonDetails = async person => {
-    // In real time scenario we may fetch additional person detials by using personid from person object
-    // For now, just setting the details object as the person profile
-    setPersonProfile(person);
+    const simulateApiCall = async () => {
+      const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+      // Simulate fetching additional details by using personid (replace this with your real API call logic)
+      // For now, just returning the person details
+      await delay(1); // Simulate delay 1 milliseconds
+      return person;
+    };
+
+    // Call the simulated API function
+    const response = await simulateApiCall();
+
+    // Update the person profile
+    setPersonProfile(response);
   };
 
-  return { personProfile, editedPerson, handleEdit, resetForm };
+  return {personProfile, handleEdit, saveChanges};
 };
 
-export { PersonDetailsViewModel };
+export {PersonDetailsViewModel};
