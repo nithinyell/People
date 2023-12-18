@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {render, act, waitFor, screen, fireEvent} from '@testing-library/react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import BuildRoot from '../../navigation/navigation';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');

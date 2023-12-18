@@ -4,7 +4,6 @@ import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {PeopleViewModel} from '../view-model/people-viewmodel';
 import {Avatar, Card} from 'react-native-paper';
 import {getRandomColor} from '../../utils/get-random-color';
-import { useEffect, useState } from 'react';
 
 const styles = StyleSheet.create({
   container: {
