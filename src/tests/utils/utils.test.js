@@ -1,4 +1,4 @@
-import { getRandomColor } from "../modules/utils/get-random-color";
+import { getRandomColor } from "../../modules/utils/get-random-color";
 
 test('getRandomColor generates a valid hex color', () => {
     for (let i = 0; i < 10; i++) {
