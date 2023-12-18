@@ -29,7 +29,7 @@
         <li><a href="#installation">Installation</a></li>
         <li><a href="#installation">App Recordings</a></li>
         <li><a href="#installation">Tests</a></li>
-        <li><a href="#installation">Project Structur></a></li>
+        <li><a href="#installation">Project Structure></a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
