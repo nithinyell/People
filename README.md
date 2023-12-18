@@ -29,6 +29,7 @@
         <li><a href="#installation">Installation</a></li>
         <li><a href="#installation">App Recordings</a></li>
         <li><a href="#installation">Tests</a></li>
+        <li><a href="#installation">Project Structur></a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -101,7 +102,44 @@ Included tests for
 * Utilities
 * E2E testing flow([test suit](https://github.com/nithinyell/People/blob/main/src/tests/views/E2E-flow.test.js)) for **Name and or email address is edited details page reflects those changes**
   <img width="1082" alt="tests" src="https://github.com/nithinyell/People/assets/18254027/c0a9377d-1dac-490e-954c-90ffc8e33913">
-   
+
+## Project Structure
+
+```
+|-- People
+    |-- android                   # Android specific files
+    |-- ios                       # iOS specific files
+    |-- node_modules              # Node.js modules
+    |-- src
+        |-- analytics             # Logs app telemetry
+            |-- analytics.js
+        |-- modules               # Application modules
+            |-- people            # People 
+                |-- data          # Service / API requests
+                |-- models        # Models for people
+                |-- view          # View Components
+                |-- view-models   # View Models for View
+            |-- person-details
+                |-- data          # Service / API requests
+                |-- models        # Models for person details
+                |-- view          # View Components
+                |-- view-models   # View Models for View
+            |-- utils
+                |-- utils.js      # Utilities / Helper Functions
+        |-- navigation            # Build Root Component
+            |-- navigation.js
+        |-- service               # Handle service calls
+            |-- navigation.js
+        |-- tests                 # Module vise tests
+    |-- .gitignore                # Git ignore file
+    |-- App.js                    # Main App component
+    |-- app.json                  # App configuration
+    |-- babel.config.js           # Babel configuration
+    |-- index.js                  # Entry point for the app
+    |-- package.json              # Node.js package file
+    |-- README.md                 # Project readme file
+```
+
 <!-- ROADMAP -->
 ## Roadmap
 
