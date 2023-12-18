@@ -1,0 +1,84 @@
+appId: org.reactjs.native.example.People
+env:
+  people: "People"
+  personDetails: ".*Person Details.*"
+  edit: "Edit"
+  personName: ".*Chris.*"
+  personEmail: ".*christ.kong@email.com.*"
+  personPhone: ".*222-123-4567.*"
+  updatedName: "New Name"
+  updatedEmail: "name@email.com"
+  assertNewEmail: ".*name@email.com.*"
+  save: "Save"
+  nameInput: "name-input"
+  emailInput: "email-input"
+  selectAll: "Select All"
+---
+- launchApp
+- waitForAnimationToEnd:
+    timeout: 5000
+
+#-----
+# Run People List Tests
+#-----
+
+## People List 
+- assertVisible:
+    text: ${people}
+
+- assertVisible:
+    text: ${personEmail}
+
+- tapOn: ${personEmail}
+
+- waitForAnimationToEnd
+
+#-------------------------
+# Run Person Details Tests
+#-------------------------
+- assertVisible:
+    text: ${personDetails}
+
+# Assert Name
+- assertVisible:
+    text: ${personName}
+
+# Assert Email
+- assertVisible:
+    text: ${personEmail}
+
+# Assert Phone
+- assertVisible:
+    text: ${personPhone}
+
+#-------------------------
+# Run Edit Details Tests
+#-------------------------
+- tapOn: ${edit}
+
+# Edit Name
+- tapOn: 
+    id: ${nameInput}
+- longPressOn: ${personName}
+- tapOn: ${selectAll}
+- eraseText
+- inputText: ${updatedName}
+
+# Edit Email
+- tapOn: 
+    id: ${emailInput}
+- longPressOn: ${personEmail}
+- tapOn: ${selectAll}
+- eraseText
+- inputText: ${updatedEmail}
+
+# Save Details
+- tapOn: ${save}
+
+# Assert Saved Details
+- assertVisible:
+    text: ${updatedName}
+
+- assertVisible:
+    text: ${assertNewEmail}
+#-------------------------
