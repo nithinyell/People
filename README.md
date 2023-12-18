@@ -46,6 +46,8 @@
 A hybrid mobile application build on React Native framework
 
 [![React][React.js]][React-url]
+[![Jest][Jest]][Jest-url]
+[![Maestro][Maestro]][Maestro-url]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -103,6 +105,17 @@ Included tests for
 * E2E testing flow([test suit](https://github.com/nithinyell/People/blob/main/src/tests/views/E2E-flow.test.js)) for **Name and or email address is edited details page reflects those changes**
   <img width="1082" alt="tests" src="https://github.com/nithinyell/People/assets/18254027/c0a9377d-1dac-490e-954c-90ffc8e33913">
 
+### Automation
+We have `maestro` enabled for automation
+- Test Suit [E2E Flow](https://github.com/nithinyell/People/blob/main/src/maestro/E2Eflow.yaml)
+- Set up maestro in local machine
+- cd to src/maestro
+- run `maestro test E2Eflow.yaml`
+  
+  __Recording__
+  
+  https://github.com/nithinyell/People/assets/18254027/425d518c-2ac1-4388-a4b3-7936f29c483a
+  
 ## Structure
 
 ```
@@ -167,3 +180,9 @@ TBD
 
 [React.js]: https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactnative.dev/
+
+[Jest]: https://img.shields.io/badge/Jest-008000?style=for-the-badge&logo=jest&logoColor=#61DAFB
+[Jest-url]: https://jestjs.io/docs/tutorial-react
+
+[Maestro]: https://img.shields.io/badge/Maestro-808080?style=for-the-badge&logo=maestro&logoColor=61DAFB
+[Maestro-url]: [https://reactnative.dev/](https://maestro.mobile.dev/)https://maestro.mobile.dev/
