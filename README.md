@@ -144,6 +144,7 @@ Included tests for
 ## Roadmap
 
 - [ ] Update to latest UI / UX
+- [ ] Enhance Telemetry
 - [ ] Enhance Test Cases
 - [ ] Improve accessibility
 - [ ] Build CI CD
