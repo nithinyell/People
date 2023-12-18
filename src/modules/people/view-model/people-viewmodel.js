@@ -30,11 +30,11 @@ const PeopleViewModel = () => {
       );
       setPeople(sortedPeopleList);
     } catch (error) {
-      // Retry option to user based on error type
+      // Provide retry option to user based on error type
     }
   };
 
-  return {people};
+  return { people };
 };
 
-export {PeopleViewModel};
+export { PeopleViewModel };

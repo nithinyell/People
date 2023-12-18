@@ -51,6 +51,7 @@ const PersonDetails = ({route, navigation}) => {
           }}
           value={personProfile.name}
           onChangeText={text => handleEdit('name', text)}
+          testID='name-input'
         />
       ) : (
         <Text style={{marginTop: 16, fontSize: 18, fontWeight: 'bold'}}>
@@ -69,6 +70,7 @@ const PersonDetails = ({route, navigation}) => {
           }}
           value={personProfile.email}
           onChangeText={text => handleEdit('email', text)}
+          testID='email-input'
         />
       ) : (
         <Card style={{width: '100%', marginTop: 16}}>
