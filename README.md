@@ -27,9 +27,9 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#installation">App Recordings</a></li>
-        <li><a href="#installation">Tests</a></li>
-        <li><a href="#installation">Project Structure</a></li>
+        <li><a href="#recordings">App Recordings</a></li>
+        <li><a href="#tests">Tests</a></li>
+        <li><a href="#structure">Project Structure</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -84,7 +84,7 @@ This project requires React Native up as per [developer guilde](https://reactnat
    npm start
    ```
 
-## App Recordings
+## Recordings
 |Android|iOS|
 |-|-|
 |<img src="https://github.com/nithinyell/People/assets/18254027/5fee9fe3-a54f-4744-9398-0ab5ccfe8dd1" width="200" height="250" />|<img src="https://github.com/nithinyell/People/assets/18254027/fde715de-bc92-4c0e-8fb4-d7ac29926391" width="200" height="250" />|
@@ -103,7 +103,7 @@ Included tests for
 * E2E testing flow([test suit](https://github.com/nithinyell/People/blob/main/src/tests/views/E2E-flow.test.js)) for **Name and or email address is edited details page reflects those changes**
   <img width="1082" alt="tests" src="https://github.com/nithinyell/People/assets/18254027/c0a9377d-1dac-490e-954c-90ffc8e33913">
 
-## Project Structure
+## Structure
 
 ```
 |-- People
