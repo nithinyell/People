@@ -93,7 +93,7 @@ This project requires React Native up as per [developer guilde](https://reactnat
 
 ## Tests
 
-Run test using, in rot folder
+Run test using, in root folder
 ```sh
 npm test
 ```
