@@ -101,7 +101,7 @@ npm test
 Included tests for 
 * View Models
 * Views
-* Utilities
+* [Utilities](https://github.com/nithinyell/People/blob/main/src/tests/utils/utils.test.js)
 * E2E testing flow([test suit](https://github.com/nithinyell/People/blob/main/src/tests/views/E2E-flow.test.js)) for **Name and or email address is edited details page reflects those changes**
   <img width="1082" alt="tests" src="https://github.com/nithinyell/People/assets/18254027/c0a9377d-1dac-490e-954c-90ffc8e33913">
 
